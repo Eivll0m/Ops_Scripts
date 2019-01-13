@@ -40,19 +40,19 @@ EOF
     echo -e "\033[32mPlease enter shadowsocks server IP: \033[0m"
     read ssip
     while [[ ! ${ssip} =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] || [ -z ${ssip} ];do
-	echo -e "\033[32mPlease enter shadowsocks server IP: \033[0m"
+	echo -e "\033[31mPlease enter shadowsocks server IP: \033[0m"
     	read ssip
     done
     echo -e "\033[32mPlease enter shadowsocks server port: \033[0m"
     read ssport
     while [[ ! ${ssport} =~ ^[1-6]{1,5} ]] || [ -z ${ssport} ];do
-	echo -e "\033[32mPlease enter shadowsocks server port: \033[0m"
+	echo -e "\033[31mPlease enter shadowsocks server port: \033[0m"
     	read ssport
     done
     echo -e "\033[32mPlease enter the shadowsocks connection password: \033[0m"
     read sspasswd
     while [ -z ${sspasswd} ];do
-	echo -e "\033[32mPlease enter the shadowsocks connection password: \033[0m"
+	echo -e "\033[31mPlease enter the shadowsocks connection password: \033[0m"
 	read sspasswd
     done
     sed -i "/server\"/s/:.\(.*\).,/:\"${ssip}\",/" /etc/shadowsocks/shadowsocks.json
