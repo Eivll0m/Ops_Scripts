@@ -5,3 +5,7 @@
 # bash install_shadowsocks_client.sh
 ```
 * ##### 安装过程中需要输入shadowsocks服务器IP、端口及连接密码。
+* ##### 临时取消代理方法
+```bash
+# while read var; do unset $var; done < <(env | grep -i proxy | awk -F= '{print $1}') 
+```
