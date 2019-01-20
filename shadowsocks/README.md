@@ -4,8 +4,7 @@
 
 ```bash
 
-# curl -sSLf 
-https://raw.githubusercontent.com/Eivll0m/Ops_Scripts/master/shadowsocks/install_shadowsocks_client.sh -o install_shadowsocks_client.sh
+# curl -sSLf https://raw.githubusercontent.com/Eivll0m/Ops_Scripts/master/shadowsocks/install_shadowsocks_client.sh -o install_shadowsocks_client.sh
 
 # bash install_shadowsocks_client.sh
 
@@ -15,7 +14,6 @@ https://raw.githubusercontent.com/Eivll0m/Ops_Scripts/master/shadowsocks/install
 
 ```bash
 
-# while read var; do unset $var; done < <(env | grep -i proxy | awk -F= '{print 
-$1}')
+# while read var; do unset $var; done < <(env | grep -i proxy | awk -F= '{print $1}')
 
 ```
